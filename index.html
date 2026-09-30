@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduGenie – AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">✦</span> EduGenie <b>AI</b></div>
+  <nav>
+    <a href="#dashboard">Dashboard</a><a href="#study">Study Plan</a>
+    <a href="#resources">Resources</a><a href="#assistant">AI Tutor</a>
+  </nav>
+  <button class="avatar">R</button>
+</header>
+
+<main>
+<section id="dashboard" class="hero">
+  <div>
+    <p class="eyebrow">YOUR PERSONAL AI LEARNING COMPANION</p>
+    <h1>Learn smarter.<br><span>Achieve more.</span></h1>
+    <p class="hero-text">EduGenie AI helps students plan study sessions, understand difficult topics, practice with quizzes and track their learning progress.</p>
+    <div class="actions">
+      <a class="btn primary" href="#study">Start Studying</a>
+      <a class="btn ghost" href="#assistant">Ask AI Tutor</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="score"><strong>78%</strong><small>Learning Goal</small></div>
+    <div class="mini"><div><b>12</b><span>Hours</span></div><div><b>8</b><span>Topics</span></div><div><b>5</b><span>Day Streak</span></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">TODAY'S OVERVIEW</p><h2>Your learning snapshot</h2>
+  <div class="stats">
+    <article><span>📚</span><div><b>4</b><small>Topics completed</small></div></article>
+    <article><span>⏱️</span><div><b>2h 35m</b><small>Study time</small></div></article>
+    <article><span>📝</span><div><b>86%</b><small>Quiz average</small></div></article>
+    <article><span>🔥</span><div><b>5 days</b><small>Study streak</small></div></article>
+  </div>
+</section>
+
+<section id="study" class="section two">
+  <div>
+    <p class="eyebrow">PERSONALIZED</p><h2>Today's study plan</h2>
+    <p class="muted">Your AI-generated plan for a focused study session.</p>
+    <div id="tasks" class="tasks"></div>
+  </div>
+  <aside class="card">
+    <h3>✨ AI Study Tip</h3>
+    <p id="tip">Use 25–30 minute focused sessions and take short breaks to keep your attention fresh.</p>
+    <button class="btn primary full" onclick="newTip()">Get New Tip</button>
+  </aside>
+</section>
+
+<section id="resources" class="section">
+  <p class="eyebrow">LEARNING HUB</p><h2>Quick resources</h2>
+  <div class="resources">
+    <article><span>📖</span><h3>Smart Notes</h3><p>Create summaries and revision notes.</p><button onclick="resource('notes')">Open</button></article>
+    <article><span>🧠</span><h3>AI Quiz</h3><p>Practice questions from your topics.</p><button onclick="resource('quiz')">Start Quiz</button></article>
+    <article><span>🎯</span><h3>Exam Prep</h3><p>Build a focused revision strategy.</p><button onclick="resource('exam')">Prepare</button></article>
+  </div>
+</section>
+
+<section id="assistant" class="section assistant">
+  <div class="assistant-head"><div><p class="eyebrow">EDUGENIE AI</p><h2>Ask your AI tutor</h2></div><span class="online">● Online</span></div>
+  <div id="chat" class="chat"><div class="bubble bot">Hi! 👋 I'm EduGenie AI. Ask me to explain a topic, make a study plan, create quiz questions or help with revision.</div></div>
+  <div class="input-row"><input id="question" placeholder="e.g. Explain OOP in simple words..." onkeydown="if(event.key==='Enter')askAI()"><button class="btn primary" onclick="askAI()">Send</button></div>
+  <div class="chips"><button onclick="quick('Explain a topic simply')">Explain topic</button><button onclick="quick('Make me a study plan')">Study plan</button><button onclick="quick('Give me 5 quiz questions')">Generate quiz</button></div>
+</section>
+</main>
+<footer>EduGenie AI • Student Learning Assistant • Learn. Practice. Grow. 🎓</footer>
+<script src="script.js"></script>
+</body>
+</html>
